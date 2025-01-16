@@ -12,6 +12,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     overflow: hidden;
+    position: relative;
 }
 
 .header {
@@ -37,6 +38,7 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+position: relative;
 }
 
 .grid-container {
@@ -130,6 +132,18 @@ align-items: center;
     top: 16px;
     left: 16px;
 }
+
+.banan {
+color:black;
+text-decoration: none;
+position: absolute;
+bottom: 24px;
+right: 24px;
+}
+
+
+
+
 
 
 
