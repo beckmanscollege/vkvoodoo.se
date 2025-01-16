@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color:#f1f1f1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+}
+
+.header {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid black;
+    }
+    
+    
+    .header-item {
+    flex: 1 0 0;
+    font-size: 14px;
+    padding: 16px 16px;
+    }
+    
+    .header-item, .border-left {
+    border-left: 1px solid black;
+    }
+
+.container {
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 200px);
+    grid-template-rows: repeat(3, 200px);
+    gap: 12px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease; 
+    position: relative;
+}
+
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The box inside the wide class should span 2 grid columns and maintain its size */
+.box.wide {
+    grid-column: span 2;
+    display: flex;              /* Use flexbox to center content */
+    justify-content: center;    /* Horizontally center the image */
+    align-items: center;        /* Vertically center the image */
+    height: 100%;               /* Ensure it takes the full available height */
+    width: 100%;                /* Ensure it takes the full available width */
+    position: relative;         /* Ensure the image can be properly centered */
+    border: none;
+    pointer-events: none;
+    transform: none !important;
+    transition: none !important;
+}
+
+/* Image inside the wide box should scale correctly */
+.box.wide img {
+    max-width: 100%;            /* Allow the image to scale to the box's width */
+    max-height: 100%;           /* Allow the image to scale to the box's height */
+    object-fit: contain;        /* Ensure the image fits inside without cropping */
+    display: block;             /* Remove any space below the image */
+    margin: 0 auto;             /* Center the image horizontally */
+}
+
+
+
+
+/* Add hover effect for boxes */
+.grid-container .box {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.grid-container .box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box */
+}
+
+
+
+
+.top-line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    position: fixed;
+    top: 55px;
+    left: 0px;
+}
+
+.middle-line {
+    width: 1px;
+    height: 55px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.rubrik {
+    font-size: 14px;
+    padding: 16px 16px;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+}
+
+
+
+
